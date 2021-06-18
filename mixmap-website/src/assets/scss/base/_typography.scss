@@ -1,0 +1,17 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto', sans-serif;
+    line-height: 140%;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+}
+.text--heading {
+   color: $color-heading;
+}
+.text--para {
+    color: $color-para;
+}
+.text--light {
+    color: #fff;
+}

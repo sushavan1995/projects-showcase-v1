@@ -1,0 +1,47 @@
+body,html {
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+}
+a, a::visited, a::after, a::hover{
+    text-decoration: none;
+    color: #0d2161;
+}
+.custom-tab {
+    transition: all 0.3s ease;
+}
+.custom-tab .tab__control {
+    display: flex;
+}
+.button {
+    padding: 0.75rem 0;
+    border: 1px solid #f6f6f6;;
+    margin:0;
+    width:33.33%;
+    background :#f6f6f6;
+    transition: all 0.3s ease;
+}
+.button.active {
+    background: #fff;
+    border:1px solid #fff;
+}
+.custom-tab {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow:hidden;
+}
+.tab__content {
+    display: none;
+}
+.tab__content.active {
+    display: block;
+}

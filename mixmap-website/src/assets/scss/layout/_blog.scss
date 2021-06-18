@@ -1,0 +1,108 @@
+.blog-section {
+  .grid {
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .element-item {
+      position: relative;
+      width: 100%;
+      display: block;
+      margin: 0 0 2.5rem 0;
+      .blog {
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        .blog__content {
+          padding: 0.75rem 0.625rem;
+          .blog__title {
+            h4 {
+              font-size: 1.3rem;
+              margin: 0 0 0.75rem 0;
+              color: $color-heading;
+            }
+          }
+          .blog__body {
+            margin: 0 0 0.75rem 0;
+            p {
+              color: $color-para;
+              font-size: 0.95rem;
+              margin: 0;
+            }
+          }
+          .blog__addi-info {
+            p {
+              color: $color-secondary;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .blog-sidebar {
+    position: sticky;
+    top: 100px;
+    .blog--search {
+      margin: 0 0 1rem 0;
+      input {
+        height: 50px;
+        padding: 0 0.625rem;
+        border: 1px solid #ddd;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .blog__recent-posts {
+      border: 1px solid #ddd;
+      margin: 0 0 1rem 0;
+      .recent-posts__header {
+        padding: 0.625rem 1rem;
+        text-align: center;
+        h4 {
+          font-size: 1.15rem;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+      .recent-posts__links {
+        padding: 0.75rem;
+        .recent-posts--link {
+          margin: 0 0 0.625rem;
+          color: $color-main;
+          display: block;
+          &:hover {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+    .blog__search-by-cat {
+      border: 1px solid #ddd;
+      .category__header {
+        padding: 0.75rem 1rem;
+        h4 {
+          font-size: 1.15rem;
+          font-weight: 500;
+          margin: 0;
+          text-align: center;
+        }
+      }
+      .button-group {
+        padding: 0.75rem;
+      }
+      .button {
+        padding: 0.25rem 0.5rem;
+        margin: 0 0.25rem 0.625rem;
+        font-size: 0.85rem;
+        border: 1px solid #ddd;
+        &.is-checked {
+          color: #fff;
+          background: $color-secondary;
+          border: 1px solid $color-secondary;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+
+body,html {
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    height: 100vh;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
+}
+a, a::visited, a::after, a::hover{
+    text-decoration: none;
+    color: #0d2161;
+}
+.bg--dark {
+    background: #081029;
+}
+.font--light {
+    color: #fff;
+}
+.countdown-section .giveaway .giveaway__countdown .giveaway__deadline .giveaway__format {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 1.25rem; 
+}
+.countdown-section .giveaway .giveaway__title h3 {
+    color: #0a5491;
+}.countdown-section .giveaway .giveaway__date h4 {
+    color: #ad4406;
+    letter-spacing: 2px;;
+}

@@ -1,0 +1,35 @@
+.bg--dark {
+    background: $color-main;
+    color: #fff;
+}
+.bg--secondary {
+    background: $color-secondary;
+    color: #fff;
+}
+.bg--bright {
+    background: $color-bright;
+    color: #fff;
+}
+.bg--light {
+    background: $color-light;
+    color: #fff;
+}
+.section {
+    padding: 4.5rem 0;
+    h2.section__title {
+        font-size: 2rem;
+        color: $color-heading;
+        text-align: center;
+        &::after {
+            content: "";
+            display: block;
+            background: $color-bright;
+            height: 4px;
+            width: 60px;
+            margin: 1.25rem auto 2.75rem auto;
+        }
+    }
+}
+.font--light {
+    color: #fff!important;
+}

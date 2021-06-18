@@ -1,0 +1,18 @@
+.gallery-section {
+  .gallery {
+    .row > .col {
+      padding: 0.5rem;
+    }
+    .gallery--element {
+      .gallery__image {
+        @include background-image-setting(center, cover, no-repeat, scroll);
+        height: 300px;
+        border-radius: 2px;
+        border: 1px solid #ddd;
+        &:hover {
+          border: 1px solid $color-secondary;
+        }
+      }
+    }
+  }
+}

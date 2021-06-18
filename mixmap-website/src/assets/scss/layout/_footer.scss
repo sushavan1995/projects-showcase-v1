@@ -1,0 +1,55 @@
+.footer {
+  padding: 60px 0 30px 0;
+  .footer__block {
+    margin: 0 0 2.5rem 0;
+    .block__title {
+      margin: 0 0 2rem 0;
+      p {
+        font-size: 0.9rem;
+        &:after {
+          content: "";
+          display: block;
+          width: 100px;
+          height: 1px;
+          background: $color-light;
+          margin: 1rem 0;
+        }
+      }
+    }
+    .contact__container {
+      padding-left: 1.25rem;
+      border: 2px solid $color-secondary;
+      border-width: 0 0 0 2px;
+      margin: 0 0 1.25rem 0;
+      p {
+        margin-bottom: 0.25rem;
+        color: $color-light;
+      }
+      a {
+        color: $color-light;
+        margin-right: 0.5rem;
+        &:hover,
+        &:active {
+          color: $color-secondary;
+        }
+      }
+    }
+    .block--link {
+      li {
+        margin: 0 0 1rem 0;
+        a {
+          color: $color-light;
+          margin-bottom: 1.5rem;
+          &:hover,
+          &:active {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    margin: 4rem 0 0 0;
+    color: $color-light;
+  }
+}

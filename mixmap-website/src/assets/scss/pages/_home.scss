@@ -1,0 +1,235 @@
+.offers-sale {
+  .card-container {
+    position: relative;
+    border-radius: 2px;
+    overflow: hidden;
+    color: #fff;
+    margin: 0 0 1rem 0;
+    .card__bg {
+      @include background-image-setting(center, cover, no-repeat, none);
+      height: 360px;
+      width: 100%;
+      @include transition-effect(0.3s, ease);
+      &.special-offers {
+        background-image: url("/assets/images/discount.jpg");
+      }
+      &.newsletters {
+        background-image: url("/assets/images/newsletter.jpg");
+      }
+      &.travel-tips {
+        background-image: url("/assets/images/travel-tips.jpg");
+      }
+    }
+    .card__overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(1, 96, 214, 0.9);
+      &.sky--blue {
+        background: rgba(0, 170, 248, 0.9);
+      }
+      &.bright--orange {
+        background: rgba(241, 59, 19, 0.9);
+      }
+    }
+    &:hover {
+      .card__bg {
+        transform: scale(1.1);
+      }
+    }
+    .card__text {
+      padding: 0 0 1.25rem 0;
+      h2 {
+        font-size: 1.75rem;
+        color: #fff;
+      }
+      p {
+        color: #fff;
+      }
+    }
+  }
+  &.top-destination {
+    .card-container {
+      .card__bg {
+        height: 300px;
+        &.newjersery {
+          background-image: url("/assets/images/top-destination/cheapest-car-insurance-in-new-jersey-nj-story-270x200.jpg");
+        }
+        &.sanfransisco {
+          background-image: url("/assets/images/top-destination/san_francisco-1024x1024-270x200.jpg");
+        }
+        &.virginia {
+          background-image: url("/assets/images/top-destination/virgi_3-1024x1024-270x200.jpg");
+        }
+        &.california {
+          background-image: url("/assets/images/top-destination/cali_5-1024x1024-270x200.jpg");
+        }
+        &.los-angeles {
+          background-image: url("/assets/images/top-destination/los_angeles_3-1024x1024-270x200.jpg");
+        }
+        &.nevada {
+          background-image: url("/assets/images/top-destination/nevaga_2-1024x1024-270x200.jpg");
+        }
+      }
+      .card__overlay {
+        background: rgba(0, 0, 0, 0.45);
+        .card__text {
+          .addi__info {
+            color: #fff;
+            transform: translateY(16px);
+            opacity: 0;
+            @include transition-effect(0.3s, ease);
+            li {
+              display: inline-block;
+              margin-right: 1rem;
+            }
+          }
+        }
+        &:hover {
+          .card__text {
+            .addi__info {
+              transform: translateY(0px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .offers-sale {
+    .card-container {
+      .card__text {
+        p {
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+
+/* Top trending */
+.top-trending {
+  .tab__container {
+    .tab--navigation {
+      select {
+        height: 50px;
+        width: 300px;
+        margin: 0 auto 1.25rem auto;
+        display: block;
+        padding: 0 0.5rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .tab__content {
+      .card__container {
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        overflow: hidden;
+        .card__header {
+          padding: 0.75rem;
+          .card__location {
+            margin: 0 0 0.5rem 0;
+            p {
+              color: #555;
+              margin: 0;
+              i {
+                margin-right: 0.4rem;
+              }
+            }
+          }
+          .card__title {
+            font-size: 1.15rem;
+            line-height: 140%;
+            color: $color-heading;
+            font-family: "Roboto", sans-serif;
+          }
+        }
+        .card__body {
+          padding: 0 0.75rem;
+          .card__reviews {
+            p {
+              color: $color-para;
+              i {
+                margin: 0 0.15rem 0 0;
+                color: $color-secondary;
+              }
+            }
+          }
+          .card__price {
+            display: flex;
+            justify-content: space-between;
+            .duration {
+              p {
+                color: #555;
+                i {
+                  margin-right: 0.4rem;
+                }
+              }
+            }
+            .cost {
+              p {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.subscribe {
+  .subscribe-text__container {
+    .subscribe__text {
+      text-align: center;
+      margin: 0 0 1.5rem 0;
+      h3 {
+        font-size: 2rem;
+      }
+      h4 {
+        font-weight: 400;
+      }
+    }
+  }
+  .form__subscribe {
+    .form-control {
+      border-radius: 2px 0 0 2px;
+      border: 2px solid #ddd;
+      border-width: 2px 0 2px 2px;
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+    button {
+      &.button-secondary {
+        border-radius: 0 2px 2px 0;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .subscribe {
+    .subscribe-text__container {
+      .subscribe__icon {
+        margin-right: 1rem;
+      }
+      .subscribe__text {
+        text-align: left;
+        margin: 0;
+        h4 {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

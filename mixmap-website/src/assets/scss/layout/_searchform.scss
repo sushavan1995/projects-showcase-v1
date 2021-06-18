@@ -1,0 +1,95 @@
+.quick-search-section {
+  .quick-search {
+    .nav {
+      .nav-item {
+        .nav-link {
+          padding: 0.5rem 0.75rem;
+          background: $color-main;
+          border: 1px solid #fff;
+          color: #fff;
+          border-radius: 2px;
+          @include transition-effect(0.3s, ease);
+          &.active {
+            background: $color-secondary;
+          }
+        }
+      }
+    }
+    .tab-content {
+      background: #fff;
+      .form {
+        .input__container {
+          position: relative;
+          label {
+            color: $color-heading;
+            padding: 1rem 0 0.25rem 1rem;
+            font-weight: 500;
+          }
+          input {
+            height: 60px;
+            padding: 0.9375rem;
+            border: 1px solid #ddd;
+            box-shadow: none;
+            border-width: 0 0 1px 0;
+            &[type="text"]::placeholder,
+            &[type="list"]::placeholder {
+              color: #777;
+            }
+            /*
+                            &[type="date"]::-webkit-calendar-picker-indicator {
+                                color: $color-secondary;
+                                margin-left: -1rem;
+                                position: absolute;
+                                top: 2.5rem;
+                                right: 1rem;
+                            }
+                            &[type="date"]::-webkit-datetime-edit-text { 
+                                color: #777;
+                            }
+                            &.form-control {
+                                border-radius: 0px;
+                            }
+                            */
+          }
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .quick-search-section {
+    .quick-search {
+      .tab-content {
+        .form {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: stretch;
+          .input__container {
+            width: 29.15%;
+            border-right: 1px solid #ddd;
+          }
+          button {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .quick-search-section {
+    .quick-search {
+      .tab-content {
+        .form {
+          .input__container {
+            width: 29.825%;
+          }
+        }
+      }
+    }
+  }
+}

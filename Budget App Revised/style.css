@@ -1,0 +1,161 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  line-height: 150%;
+}
+ul,
+ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a,
+a::visited,
+a::after,
+a::hover {
+  text-decoration: none;
+  color: #0d2161;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* utility classes */
+.bg--income {
+  background: #19a850;
+  color: #fff;
+}
+.bg--expense {
+  background: #e73d31;
+  color: #fff;
+}
+.text--danger {
+  color: #e73d31;
+}
+.text--success {
+  color: #19a850;
+}
+
+/* app masthead */
+.app__masthead {
+  height: 40vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.45)),
+    url(./budget-app-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* message for adding and removing */
+.message {
+  position: fixed;
+  bottom: -3rem;
+  right: 1rem;
+  background: #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  padding: 0.75rem 1.25rem;
+  border-radius: 2px;
+  transition: all 0.6s ease;
+}
+.message.message--show {
+  bottom: 0.75rem;
+}
+
+/* output */
+.output h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* input form */
+.form {
+  padding: 0.9375rem;
+}
+.form .form-control {
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+.form .form__submit--btn {
+  border: 1px solid #2472e7;
+  width: 100%;
+  background: #2472e7;
+}
+.form .form__submit--btn i {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* list for income and expense */
+.list .list__title {
+  font-weight: 400;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.25rem;
+}
+.list .list__items .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 0.75rem 0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.list .list__items .item:nth-child(even) {
+  background: #eee;
+}
+.list .list__items .item .item__remove--btn:hover i {
+  color: #e73d31;
+}
+.list .list__items .item .item__body {
+  transform: translateX(40px);
+  transition: all 0.3s ease;
+}
+.list .list__items .item:hover .item__body {
+  transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+  .form {
+    display: flex;
+    justify-content: center;
+  }
+  .form .form-control {
+    margin-right: 0.75rem;
+    margin-bottom: 0;
+  }
+  .form .form__select--operation {
+    width: 40px;
+  }
+  .form .form__input--description {
+    width: 450px;
+  }
+  .form .form__input--value {
+    width: 200px;
+  }
+  .form .form__submit--btn {
+    width: auto;
+  }
+}

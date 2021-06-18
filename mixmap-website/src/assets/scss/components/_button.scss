@@ -1,0 +1,45 @@
+.button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: 2px solid #444;
+    border-radius: 2px;
+    @include transition-effect(0.3s, ease);
+    line-height: 150%;
+    background: $color-light;
+    color: #444;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.button--main {
+    @extend .button;
+    color: #fff;
+    border: 2px solid $color-main;
+    background: $color-main;
+}
+.button--secondary {
+    @extend .button;
+    color: #fff;
+    border: 2px solid $color-secondary;
+    background: $color-secondary;
+}
+.button--bright {
+    @extend .button;
+    color: #fff;
+    border: 2px solid $color-bright;
+    background: $color-bright;
+}
+.button {
+    &--main:hover, &--secondary:hover, &--bright:hover {
+        color: #fff;
+    }
+}
+.button--outline {
+    @extend .button;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
+    &:hover {
+        color: $color-secondary;
+        background: #fff;
+    }
+}

@@ -1,0 +1,158 @@
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  @include transition-effect(0.3s, ease);
+  .top-header {
+    padding: 0.9375rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-width: 0 0 1px 0;
+    .top-header__wrapper {
+      a {
+        color: #fff;
+        font-size: 0.85rem;
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+      .social__info {
+        a {
+          margin-right: 0.75rem;
+        }
+        .contact__mail {
+          margin-left: 0.75rem;
+        }
+      }
+      .site__cta {
+        .site__phone {
+          span {
+            font-size: 0.85rem;
+          }
+        }
+        a {
+          margin-left: 1rem;
+        }
+        .site__login--btn,
+        .site__signup--btn {
+          padding: 0;
+          margin-left: 1rem;
+          background: transparent;
+          border: none;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .navbar-brand {
+    filter: invert(1);
+    margin-left: 0.7rem;
+    padding: 1rem 0;
+  }
+  .navbar-toggler {
+    margin-right: 0.9375rem;
+    span {
+      color: $color-main;
+    }
+    &:focus,
+    &:active,
+    &-icon:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .navbar-nav {
+    background: $color-main;
+    .nav-item {
+      .nav-link {
+        padding: 0.9375rem;
+        color: #fff;
+        &:hover,
+        &:active {
+          background-color: $color-secondary;
+        }
+      }
+    }
+  }
+  &.navbar-shrink {
+    top: -55px;
+    animation: sliding-down 1s ease;
+    .navbar-brand {
+      img {
+        width: 130px;
+      }
+    }
+  }
+  @keyframes sliding-down {
+    from {
+      top: -100px;
+    }
+    to {
+      top: -55px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navbar {
+    .top-header {
+      .top-header__wrapper {
+        .social__info {
+          .social__icons {
+            padding-right: 0.75rem;
+            border-right: 1px solid #ddd;
+          }
+        }
+        .site__cta {
+          .site__phone,
+          .site__login {
+            border-right: 1px solid #fff;
+            padding-right: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .navbar {
+    background: transparent;
+    box-shadow: none;
+    .navbar-brand {
+      filter: invert(0);
+    }
+    .navbar-nav {
+      background: transparent;
+      margin: 0 0.9375rem 0 auto;
+      .nav-item {
+        margin-left: 1rem;
+        .nav-link {
+          color: #fff;
+          &:hover,
+          &:active {
+            background-color: transparent;
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+    &.navbar-shrink {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      .navbar-brand {
+        filter: invert(1);
+      }
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: #212529;
+            &:hover,
+            &:active {
+              background-color: transparent;
+              color: $color-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}

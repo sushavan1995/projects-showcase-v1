@@ -1,0 +1,64 @@
+.form__login {
+  .input__container {
+    margin: 0 0 2.25rem 0;
+    &:focus-within label {
+      color: #ccc;
+      font-size: 0.75rem;
+    }
+    label {
+      font-weight: 500;
+      color: $color-heading;
+      @include transition-effect(0.3s, ease);
+      height: 24px;
+      &.error {
+        color: red;
+        font-size: 0.85rem;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+    .form-control {
+      border: 1px solid #ddd;
+      border-width: 0 0 1px 0;
+      margin: 0 0 0.75rem 0;
+      border-radius: 0;
+      padding: 0.35rem 0;
+      &:focus {
+        outline: none;
+        border: 1px solid $color-secondary;
+        border-width: 0 0 1px 0;
+        box-shadow: none;
+        background: #fff;
+      }
+    }
+  }
+  .form__password--forget {
+    margin: 0 0 1.5rem 0;
+    text-align: right;
+    float: right;
+  }
+  button {
+    width: 100%;
+  }
+}
+.site__login--google,
+.site__login--facebook {
+  padding: 0.75rem 0;
+  width: 50%;
+  margin: 0 0.5rem;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+  i {
+    margin-right: 0.25rem;
+  }
+}
+.site__login--google {
+  background: #db4437;
+}
+.site__login--facebook {
+  background: #4267b2;
+}
+.error {
+  color: red;
+}

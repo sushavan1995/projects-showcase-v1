@@ -1,0 +1,11 @@
+@mixin transition-effect($duration, $timing-function) {
+    -webkit-transition: all $duration $timing-function;
+    -o-transition: all $duration $timing-function;
+    transition: all $duration $timing-function;
+}
+@mixin background-image-setting($position, $size, $repeat, $attachment) {
+    background-position: $position;
+    background-size: $size;
+    background-repeat: $repeat;
+    background-attachment: $attachment;
+}

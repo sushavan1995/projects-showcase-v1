@@ -1,0 +1,163 @@
+.contact-section {
+    .box-shadow {
+        box-shadow:  0 2px 6px rgba(0,0,0,0.2);
+    } 
+    .contact {
+        padding:1.5rem 1rem 0;
+        border-radius: 2px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        .contact__header {
+            margin:0 0 2.25rem;
+            h4 {
+                font-size: 1.5rem;
+                font-weight: 400;
+                margin: 0 0 0.5rem 0;
+            }
+            p {
+                margin:0;
+                font-size: 0.9rem;
+                color: rgba(255,255,255,0.75);
+            }
+        }
+        .contact__info {
+            padding-bottom: 4.5rem;
+            .contact__wrapper {
+                margin-bottom: 1.25rem;
+                display: flex;
+                align-items: center;
+                .contact__icon {
+                    width: 30px;
+                    i {
+                        color: $color-secondary;
+                    }
+                }
+                .contact__text {
+                    p {
+                        margin:0;
+                    }
+                }
+            }
+        }
+            .social__icons {
+                padding-bottom: 1rem;
+                display: flex;
+                a {
+                    color : rgba(255,255,255,0.8);
+                    margin-right: 0.75rem;
+                    height: 30px;
+                    width: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    &:hover {
+                        background: $color-bright;
+                        color: #fff;
+                        border-radius: 50%;
+                    }
+                }
+            }
+            .large__shape {
+                position: absolute;
+                width: 250px;
+                height: 250px;
+                background: $color-secondary;
+                bottom: -100px;
+                right: -100px;
+                border-radius: 50%;
+                opacity: 0.8;
+            }
+            .small__shape {
+                position: absolute;
+                width:100px;
+                height: 100px;
+                background: $color-bright;
+                top: -50px;
+                right: -60px;
+                border-radius: 50%;
+                opacity: 0.8;
+            }
+    }
+
+    .contact__form {
+        padding: 2.25rem 1rem;
+        .input__container {
+            margin: 0 0 2.25rem 0;
+            &:focus-within label {
+                color: #ccc;
+                font-size: 0.75rem;
+            }
+            label {
+                font-weight: 500;
+                color: $color-heading;
+                @include transition-effect(0.3s, ease);
+                height: 24px;
+                &.error {
+                    color: red;
+                    font-size: 0.85rem;
+                    font-family: 'Roboto', sans-serif;
+                }
+            }
+            .form-control {
+                border: 1px solid #ddd;
+                border-width: 0 0 1px 0;
+                margin: 0 0 0.75rem 0;
+                border-radius: 0;
+                padding: 0.35rem 0;
+                &:focus {
+                    outline: none;
+                    border: 1px solid $color-secondary;
+                    border-width:0 0 1px 0;
+                    box-shadow: none;
+                    background: #fff;
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+    .error {
+        color : red;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .contact-section {
+        .contact {
+            .social__icons {
+                position: absolute;
+                bottom: 1rem;
+                left: 1.25rem;
+                padding-bottom: 0;
+            }
+        }
+        .contact__form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            .input__container {
+                width: 50%;
+                padding-right: 1.25rem;
+                &.lg {
+                    width: 100%;
+                }
+            }
+            button {
+               width: auto;
+        }
+    }
+}
+}
+@include media-breakpoint-up(xl) {
+    .contact-section {
+        .contact {
+            padding: 1.5rem 1.75rem;
+            .social__icons {
+                left: 1.75rem;
+            }
+        }
+    }
+}

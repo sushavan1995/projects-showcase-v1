@@ -1,0 +1,60 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: #eee;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  line-height: 150%;
+}
+a,
+a::visited,
+a::after,
+a::hover {
+  text-decoration: none;
+  color: #0d2161;
+}
+
+.app .output {
+  visibility: hidden;
+}
+.app .output.output--show {
+  visibility: visible;
+}
+.app .output .output__list .item {
+   border: 1px solid #ddd;
+   display: flex;
+   justify-content: space-between;
+   background :#fff;
+   padding: 0.5rem;
+   margin-bottom: 0.5rem;
+}
+.app .button {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+}
+.app .button.item__edit--btn i {
+     color: rgb(236, 121, 14);
+}
+.app .button.item__delete--btn i {
+  color:rgb(185, 34, 14);
+}
+@media(min-width: 992px) {
+    .app {
+      width: 60%;
+      margin: 0 auto;
+    }
+}

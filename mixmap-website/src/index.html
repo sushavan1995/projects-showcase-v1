@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/owl.carousel/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/owl.carousel/dist/assets/owl.theme.default.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Mixmap Travel Theme | Home</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top flex-wrap p-0" id="mainNav">
+        <div class="top-header w-100 bg--dark">
+          <div class="top-header__wrapper d-flex justify-content-between">
+            <div class="social__info d-flex">
+              <div class="social__icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+              </div>
+              <div class="contact__mail d-none d-md-block">
+                <a href="mailto:contact@mixmap.com">contact@mixmap.com</a>
+              </div>
+            </div>
+            <div class="site__cta d-flex">
+              <div class="site__phone d-none d-md-block">
+                <span>+111 123456789</span>
+              </div>
+              <div class="site__login">
+                <button
+                  type="button"
+                  class="site__login--btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#siteLogin"
+                >
+                  Login
+                </button>
+              </div>
+              <button
+                type="button"
+                class="site__signup--btn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+        <a class="navbar-brand" href="index.html"
+          ><img src="assets/images/logo/mix_logo-2.svg" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="bi bi-list"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/faqs.html">Faqs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="masthead d-flex justify-content-center align-items-center">
+        <div class="masthead__content w-100 text-center">
+          <div class="container">
+            <h1>Hi There!</h1>
+            <h4>Where would you like to go?</h4>
+            <form
+              action="#"
+              class="masthead__search-form"
+              id="mastheadSearchForm"
+              autocomplete="off"
+            >
+              <div class="input-container">
+                <input
+                  type="text"
+                  class="destination__quick--search"
+                  name="destination"
+                  id="destinationQuickSearch"
+                  placeholder="e.g. Los Angeles"
+                  required
+                />
+                <button type="submit" class="destination__quick--search-button">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="section quick-search-section bg--dark"
+      id="quickSearchSection"
+    >
+      <div class="container">
+        <div class="quick-search">
+          <ul class="nav nav-pills" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="pills-tour-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#tour"
+                type="button"
+                role="tab"
+                aria-controls="tour"
+                aria-selected="true"
+              >
+                Tour
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-hotel-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#hotel"
+                type="button"
+                role="tab"
+                aria-controls="hotel"
+                aria-selected="false"
+              >
+                Hotel
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="pills-car-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#car"
+                type="button"
+                role="tab"
+                aria-controls="car"
+                aria-selected="false"
+              >
+                Car Rental
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="tour"
+              role="tabpanel"
+              aria-labelledby="pills-tour-tab"
+            >
+              <form action="#" class="form search__tour" id="tourSearch">
+                <div class="input__container">
+                  <label for="destination">Destination</label>
+                  <input
+                    list="destination"
+                    name="destination"
+                    class="form-control"
+                    placeholder="Where are you going?"
+                    autocomplete="off"
+                  />
+                  <datalist id="destination">
+                    <option value="New York"></option>
+                    <option value="India"></option>
+                    <option value="Japan"></option>
+                    <option value="California"></option>
+                    <option value="Bhutan"></option>
+                    <option value="France"></option>
+                    <option value="Spain"></option>
+                  </datalist>
+                </div>
+                <div class="input__container">
+                  <label for="starting-date">Date of Journey</label>
+                  <input type="date" name="starting" class="form-control" />
+                </div>
+                <div class="input__container">
+                  <label for="return-date">Date of Return</label>
+                  <input type="date" name="ending" class="form-control" />
+                </div>
+                <button
+                  type="submit"
+                  class="button--secondary d-sm-block d-md-block d-lg-inline"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="hotel"
+              role="tabpanel"
+              aria-labelledby="pills-hotel-tab"
+            >
+              <form action="#" class="form search__hotel" id="hotelSearch">
+                <div class="input__container">
+                  <label for="destination">Destination</label>
+                  <input
+                    list="destination"
+                    name="destination"
+                    class="form-control"
+                    placeholder="Where are you going?"
+                    autocomplete="off"
+                  />
+                  <datalist id="destination">
+                    <option value="New York"></option>
+                    <option value="India"></option>
+                    <option value="Japan"></option>
+                    <option value="California"></option>
+                    <option value="Bhutan"></option>
+                    <option value="France"></option>
+                    <option value="Spain"></option>
+                  </datalist>
+                </div>
+                <div class="input__container">
+                  <label for="Check in">Check In</label>
+                  <input
+                    type="date"
+                    name="checkin"
+                    class="form-control"
+                    placeholder="Check in"
+                  />
+                </div>
+                <div class="input__container">
+                  <label for="Check out">Check Out</label>
+                  <input
+                    type="date"
+                    name="checkout"
+                    class="form-control"
+                    placeholder="Check out"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="button--secondary d-sm-block d-md-block d-lg-inline"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="car"
+              role="tabpanel"
+              aria-labelledby="pills-car-tab"
+            >
+              <form action="#" class="form search__car" id="carSearch">
+                <div class="input__container">
+                  <label for="destination">Destination</label>
+                  <input
+                    list="destination"
+                    name="destination"
+                    class="form-control"
+                    placeholder="Where are you going?"
+                    autocomplete="off"
+                  />
+                  <datalist id="destination">
+                    <option value="New York"></option>
+                    <option value="India"></option>
+                    <option value="Japan"></option>
+                    <option value="California"></option>
+                    <option value="Bhutan"></option>
+                    <option value="France"></option>
+                    <option value="Spain"></option>
+                  </datalist>
+                </div>
+                <div class="input__container">
+                  <label for="Pick up">Pick Up Time:</label>
+                  <input
+                    type="time"
+                    name="pickuptime"
+                    class="form-control"
+                    placeholder="Pick Up Time"
+                  />
+                </div>
+                <div class="input__container">
+                  <label for="Return">Return Time:</label>
+                  <input
+                    type="time"
+                    name="returntime"
+                    class="form-control"
+                    placeholder="Return Time"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  class="button--secondary d-sm-block d-md-block d-lg-inline"
+                >
+                  Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section offers-sale">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="card-container">
+              <div class="card__bg special-offers"></div>
+              <div class="card__overlay">
+                <div class="card__text">
+                  <h2>Special Offers</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Omnis nostrum eius harum quod exercitationem quia.
+                  </p>
+                </div>
+                <div class="card__cta">
+                  <a href="#" class="button--outline">See Deals</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3 col-lg-3 col-xl-3 col-xxl-3">
+            <div class="card-container">
+              <div class="card__bg newsletters"></div>
+              <div class="card__overlay sky--blue">
+                <div class="card__text">
+                  <h2>Newsletters</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Omnis nostrum eius harum quod exercitationem quia.
+                  </p>
+                </div>
+                <div class="card__cta">
+                  <a href="#" class="button--outline">Sign Up</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-3 col-lg-3 col-xl-3 col-xxl-3">
+            <div class="card-container">
+              <div class="card__bg travel-tips"></div>
+              <div class="card__overlay bright--orange">
+                <div class="card__text">
+                  <h2>Travel Tips</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Omnis nostrum eius harum quod exercitationem quia.
+                  </p>
+                </div>
+                <div class="card__cta">
+                  <a href="#" class="button--outline">Get Inspired</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section top-destination offers-sale bg--light">
+      <div class="container">
+        <h2 class="section__title">Top Destination</h2>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <a href="#" class="d-block w-100">
+              <div class="card-container">
+                <div class="card__bg newjersery"></div>
+                <div class="card__overlay">
+                  <div class="card__text text-center">
+                    <h2>NEW JERSEY</h2>
+                    <ul class="addi__info">
+                      <li><small>20 Hotels</small></li>
+                      <li><small>24 Tours</small></li>
+                      <li><small>21 Activities</small></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card-container">
+              <a href="#" class="d-block w-100">
+                <div class="card__bg sanfransisco"></div>
+                <div class="card__overlay">
+                  <div class="card__text text-center">
+                    <h2>SAN FRANCISCO</h2>
+                    <ul class="addi__info">
+                      <li><small>20 Hotels</small></li>
+                      <li><small>24 Tours</small></li>
+                      <li><small>21 Activities</small></li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card-container">
+              <a href="#" class="d-block w-100">
+                <div class="card__bg virginia"></div>
+                <div class="card__overlay">
+                  <div class="card__text text-center">
+                    <h2>VIRGINIA</h2>
+                    <ul class="addi__info">
+                      <li><small>20 Hotels</small></li>
+                      <li><small>24 Tours</small></li>
+                      <li><small>21 Activities</small></li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card-container">
+              <a href="#" class="d-block w-100">
+                <div class="card__bg california"></div>
+                <div class="card__overlay">
+                  <div class="card__text text-center">
+                    <h2>CALIFORNIA</h2>
+                    <ul class="addi__info">
+                      <li><small>20 Hotels</small></li>
+                      <li><small>24 Tours</small></li>
+                      <li><small>21 Activities</small></li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card-container">
+              <a href="#" class="d-block w-100">
+                <div class="card__bg los-angeles"></div>
+                <div class="card__overlay">
+                  <div class="card__text text-center">
+                    <h2>LOS ANGELES</h2>
+                    <ul class="addi__info">
+                      <li><small>20 Hotels</small></li>
+                      <li><small>24 Tours</small></li>
+                      <li><small>21 Activities</small></li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card-container">
+              <a href="#" class="d-block w-100">
+                <div class="card__bg nevada"></div>
+                <div class="card__overlay">
+                  <div class="card__text text-center">
+                    <h2>NEVADA</h2>
+                    <ul class="addi__info">
+                      <li><small>20 Hotels</small></li>
+                      <li><small>24 Tours</small></li>
+                      <li><small>21 Activities</small></li>
+                    </ul>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section top-trending">
+      <div class="container">
+        <div class="tab__container">
+          <div class="tab--navigation">
+            <h2 class="section__title mr-2">Top Trending</h2>
+            <select id="select-box" class="d-none">
+              <option value="tourTrending">Tour</option>
+              <option value="hotelTrending">Hotel</option>
+              <option value="activitiesTrending">Activities</option>
+            </select>
+          </div>
+
+          <div id="tab-tourTrending" class="tab__content">
+            <div class="owl-carousel owl-theme">
+              <a href="#" class="d-block">
+                <div class="card__container">
+                  <div class="card__img">
+                    <img
+                      src="assets/images/trending-tour/Beautiful-US-Cities-to-Travel-to-680x500.jpg"
+                      alt="us-citites"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <div class="card__location">
+                      <p>
+                        <small
+                          ><i class="bi bi-geo-alt-fill"></i>Nevada,
+                          America</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card__title">
+                      American Parks Trail end Rapid City
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__reviews">
+                      <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        2 reviews
+                      </p>
+                    </div>
+                    <div class="card__price">
+                      <div class="duration">
+                        <p>
+                          <small><i class="bi bi-clock"></i>8h</small>
+                        </p>
+                      </div>
+                      <div class="cost">
+                        <p><small>$500</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="d-block">
+                <div class="card__container">
+                  <div class="card__img">
+                    <img
+                      src="assets/images/trending-tour/slide-faqs-680x500.jpg"
+                      alt="us-citites"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <div class="card__location">
+                      <p>
+                        <small
+                          ><i class="bi bi-geo-alt-fill"></i>Nevada,
+                          America</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card__title">
+                      Los Angeles to San Francisco Express
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__reviews">
+                      <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        1 reviews
+                      </p>
+                    </div>
+                    <div class="card__price">
+                      <div class="duration">
+                        <p>
+                          <small><i class="bi bi-clock"></i>8h</small>
+                        </p>
+                      </div>
+                      <div class="cost">
+                        <p><small>$500</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="d-block">
+                <div class="card__container">
+                  <div class="card__img">
+                    <img
+                      src="assets/images/trending-tour/TheCommonWanderer_-680x500.jpg"
+                      alt="us-citites"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <div class="card__location">
+                      <p>
+                        <small
+                          ><i class="bi bi-geo-alt-fill"></i>Nevada,
+                          America</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card__title">
+                      Two Hour Walking Tour of Manhattan
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__reviews">
+                      <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        1 reviews
+                      </p>
+                    </div>
+                    <div class="card__price">
+                      <div class="duration">
+                        <p>
+                          <small><i class="bi bi-clock"></i>8h</small>
+                        </p>
+                      </div>
+                      <div class="cost">
+                        <p><small>$500</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="d-block">
+                <div class="card__container">
+                  <div class="card__img">
+                    <img
+                      src="assets/images/trending-tour/tour_img-755002-145-2-680x500.jpg"
+                      alt="us-citites"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <div class="card__location">
+                      <p>
+                        <small
+                          ><i class="bi bi-geo-alt-fill"></i>Nevada,
+                          America</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card__title">
+                      Rockies, Yellowstone & Mt Rushmore
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__reviews">
+                      <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        1 reviews
+                      </p>
+                    </div>
+                    <div class="card__price">
+                      <div class="duration">
+                        <p>
+                          <small><i class="bi bi-clock"></i>8h</small>
+                        </p>
+                      </div>
+                      <div class="cost">
+                        <p><small>$500</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="d-block">
+                <div class="card__container">
+                  <div class="card__img">
+                    <img
+                      src="assets/images/trending-tour/Beautiful-US-Cities-to-Travel-to-680x500.jpg"
+                      alt="us-citites"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <div class="card__location">
+                      <p>
+                        <small
+                          ><i class="bi bi-geo-alt-fill"></i>Nevada,
+                          America</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card__title">
+                      Northern California Summer 2019
+                    </div>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__reviews">
+                      <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        1 reviews
+                      </p>
+                    </div>
+                    <div class="card__price">
+                      <div class="duration">
+                        <p>
+                          <small><i class="bi bi-clock"></i>8h</small>
+                        </p>
+                      </div>
+                      <div class="cost">
+                        <p><small>from</small>$500</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="d-block">
+                <div class="card__container">
+                  <div class="card__img">
+                    <img
+                      src="assets/images/trending-tour/los_angeles_3-680x500.jpg"
+                      alt="us-citites"
+                    />
+                  </div>
+                  <div class="card__header">
+                    <div class="card__location">
+                      <p>
+                        <small
+                          ><i class="bi bi-geo-alt-fill"></i>Nevada,
+                          America</small
+                        >
+                      </p>
+                    </div>
+                    <div class="card__title">American Cities</div>
+                  </div>
+                  <div class="card__body">
+                    <div class="card__reviews">
+                      <p>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        1 reviews
+                      </p>
+                    </div>
+                    <div class="card__price">
+                      <div class="duration">
+                        <p>
+                          <small><i class="bi bi-clock"></i>8h</small>
+                        </p>
+                      </div>
+                      <div class="cost">
+                        <p><small>$500</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div id="tab-hotelTrending" class="tab__content">Coming soon.</div>
+          <div id="tab-activitiesTrending" class="tab__content">
+            Coming soon.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section subscribe bg--light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="subscribe-text__container d-lg-flex align-items-center">
+              <div class="subscribe__icon">
+                <img
+                  src="assets/images/ico_email_subscribe.svg"
+                  class="mx-auto"
+                  alt="email-service-icon"
+                />
+              </div>
+              <div class="subscribe__text">
+                <h3 class="text--heading">Get Updates & More</h3>
+                <h4 class="text--para">Thoughtful thoughts to your inbox</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <form action="#" class="form__subscribe d-flex" id="formSubscribe">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+              />
+              <button type="submit" class="button--secondary text-uppercase">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="section footer bg--dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="footer__block">
+              <div class="block__title">
+                <p class="text-uppercase">Need help?</p>
+              </div>
+              <div class="contact__container">
+                <p><small>Call Us</small></p>
+                <h4 class="text--light">+ 00 33 44 5678</h4>
+              </div>
+              <div class="contact__container">
+                <p><small>Email for Us</small></p>
+                <h4 class="text--healight">hello@yoursite.com</h4>
+              </div>
+              <div class="contact__container">
+                <p><small>Call Us</small></p>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="footer__block">
+              <div class="block__title">
+                <p class="" text-uppercase>Company</p>
+              </div>
+              <ul class="block--link">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Community Blog</a></li>
+                <li><a href="#">Rewards</a></li>
+                <li><a href="#">Work with Us</a></li>
+                <li><a href="#">Meet the Team</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="footer__block">
+              <div class="block__title">
+                <p class="" text-uppercase>Support</p>
+              </div>
+              <ul class="block--link">
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Legal</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Affiliate Program</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="copyright__text">
+            <p class="text-lg-center">Copyright © 2021 by John Doe</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- login Modal -->
+    <div
+      class="modal fade"
+      id="siteLogin"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="" class="form form__login">
+              <div class="input__container">
+                <label for="Email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div class="input__container">
+                <label for="Password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  id="password"
+                />
+              </div>
+              <a href="#" class="form__password--forget text-danger"
+                >Forgot Password?</a
+              >
+
+              <button
+                stype="submit"
+                class="button--secondary form__submit--btn"
+              >
+                Submit
+              </button>
+            </form>
+            <div class="p-3 text-center">- OR Login with -</div>
+            <div class="site__cta d-flex text-center">
+              <a href="#" class="site__login--google"
+                ><i class="bi bi-google"></i>Google</a
+              >
+              <a href="#" class="site__login--facebook"
+                ><i class="bi bi-facebook"></i>facebook</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+        <!-- Signup Modal -->
+        <div
+        class="modal fade"
+        id="siteSignup"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign Up</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="" class="form form__login">
+                <div class="input__container">
+                  <label for="Name">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    id="name"
+                  />
+                </div>
+                <div class="input__container">
+                  <label for="Email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    id="email"
+                  />
+                </div>
+                <div class="input__container">
+                  <label for="Password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    id="password"
+                  />
+                </div>
+                <div class="input__container">
+                  <label for="Confirm Password">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="confpassword"
+                    id="confPassword"
+                  />
+                </div>
+                <button
+                  stype="submit"
+                  class="button--secondary form__submit--btn"
+                >
+                  Submit
+                </button>
+              </form>
+              <div class="p-3 text-center">- OR Sign up with -</div>
+              <div class="site__cta d-flex text-center">
+                <a href="#" class="site__login--google"
+                  ><i class="bi bi-google"></i>Google</a
+                >
+                <a href="#" class="site__login--facebook"
+                  ><i class="bi bi-facebook"></i>facebook</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>

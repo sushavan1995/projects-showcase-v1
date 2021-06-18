@@ -1,0 +1,103 @@
+.about-section {
+    .about__wrapper {
+        .about__content {
+            margin-bottom: 2.25rem;
+            img {
+                margin: 0 auto 1.75rem auto;
+            }
+        }
+
+    }
+    .client__stat {
+        .stat__container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2.75rem;
+            border: 2px solid $color-secondary;
+            text-align: center;
+            width:100%;
+            height:180px;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+            .stat__no {
+                h3 {
+                    font-size: 2rem;
+                }
+            }
+}
+    }
+    .founder-quote {
+        .founder__quote {
+            margin-bottom: 1.5rem;
+            h5 {
+                margin:0;
+            }
+        }
+        .founder__image {
+            margin-bottom: 1.5rem;
+        }
+        .founder__profile {
+            p {
+                margin-bottom: 0.25rem;
+            }
+        }
+    }
+}
+
+.team-section {
+    .profile {
+        padding-bottom: 2.5rem;
+        .profile__img {
+            margin: 0 0 1rem 0;
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+    .profile__desc {
+        p {
+            margin: 0 0 0.25rem 0;
+            font-weight: 500;
+            &:nth-child(2) {
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.career-cta-section {
+    position: relative;
+    .cta__text {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        z-index: 99;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        pointer-events: none;
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+        p {
+            a {
+                pointer-events: auto;
+            }
+        }
+}
+    .item {
+        width: 100%;
+    }
+        .bg__block {
+            @include background-image-setting(center, cover, no-repeat, scroll);
+            height: 500px;
+        }
+}
